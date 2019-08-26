@@ -1,0 +1,16 @@
+#
+# IceCast Docker Compose Configuration File
+#
+
+version: '2.2'
+
+services:
+  icecast:
+    image: dockuru101/icecast:1.0
+    ports:
+      - '8000:8000'
+    env_file: icecast.env
+    volumes:
+      - /home/icecast/config:/etc/icecast
+      - /home/icecast/log:/var/log/icecast
+    restart: always
