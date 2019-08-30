@@ -12,4 +12,6 @@ ICECAST_LOCATION: This sets the location string for this Icecast instance. defau
 ICECAST_MAX_CLIENTS: Total number of concurrent clients supported by the server. default: 100</pre>
 
 Usage :
-<pre>docker run -d -p 8000:8000 --name icecast -v /my/own/logdir:/var/log/icecast -v /my/own/configdir:/etc/icecast dockuru101/icecast:1.0 </pre>
+<pre> first, put icecast.xml in your configdir. Then run the command as follows :
+
+docker run -d -p 8000:8000 --name icecast -v /my/own/logdir:/var/log/icecast -v /my/own/configdir:/etc/icecast dockuru101/icecast:1.0 </pre>
